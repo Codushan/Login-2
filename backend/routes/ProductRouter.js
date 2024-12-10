@@ -2,7 +2,6 @@ const ensureAuthenticated = require('../middlewares/Auth');
 const routers = require('express').Router();
 
 routers.get('/', ensureAuthenticated, (req, res) => {
-    console.log('Products route accessed');
     console.log('  ----logged in user details----', req.user);    
     try {
         res.status(200).json([
