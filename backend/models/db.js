@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const mongo_url = process.env.MONGO_CONN;
+const mongo_url = process.env.MONGO_CONN || 'mongodb://localhost:27017/express-mongo';
 
 mongoose.connect(mongo_url)
 .then(() => {

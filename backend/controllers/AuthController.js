@@ -1,6 +1,8 @@
 const bcrypt = require('bcrypt');
 const UserModel = require('../models/User');
 const jwt = require('jsonwebtoken');
+const { signupValidation } = require('../middlewares/AuthValidation');
+const { loginValidation } = require('../middlewares/AuthValidation');
 
 
 const signup = async (req, res) =>{
@@ -61,5 +63,5 @@ const jwtToken = jwt.sign(
 }
 
 module.exports = {
-     signup, login
+    signupValidation, signup, loginValidation, login
 }
