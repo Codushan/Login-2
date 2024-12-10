@@ -22,7 +22,7 @@ function App() {
       <RefreshHandler class="refresh" setIsAuthenticated={ setIsAuthenticated }/>
       <Routes>
         <Route path="/home" element={<Home />} />
-        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>
