@@ -40,7 +40,7 @@ const Home = () => {
 
   const fetchProducts = async () =>{
     try {
-        const URL = 'http://localhost:8080/products';
+        const URL = 'https://login-2-api.vercel.app/products';
         const headers = {
             headers : {
                 'Authorization': localStorage.getItem('jwtToken')
