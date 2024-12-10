@@ -11,7 +11,7 @@ const ensureAuthenticated = (req, res, next) => {
         next();
     }catch(err){
         return res.status(403)
-        .json({message: 'Unauthorized, JWT token is invalid'});
+        .json({message: 'Unauthorized, JWT token is expired'});
     }
 }
 
