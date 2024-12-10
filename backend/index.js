@@ -17,7 +17,13 @@ app.get('/ping', (req, res) => {
     res.send('pong');
 });
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors(
+    {
+        origin:true,
+        methods:["POST","GET"],
+        credentials:true
+    }
+));
 
 app.use(express.json());
 app.use('/auth', authRouter);
