@@ -13,8 +13,8 @@ const PORT = 40000445 || process.env.PORT || 8080;
 
 app.use(bodyParser.json());
 
-app.get('/ping', (req, res) => {
-    res.send('pong');
+app.get('/', (req, res) => {
+    res.json('Hello');
 });
 app.use(bodyParser.json());
 app.use(cors(
