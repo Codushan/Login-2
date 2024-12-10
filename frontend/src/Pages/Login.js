@@ -32,7 +32,7 @@ const handleLogin = async (e) => {
         return handleError('email and password are required');
     }
     try {
-        const URL = 'http://localhost:8080/auth/login';
+        const URL = 'https://login-2-beta.vercel.app/login';
         const response = await fetch(URL, {
             method: 'POST',
             headers: {
