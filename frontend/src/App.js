@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="App">
-    {* <RefreshHandler class="refresh" setIsAuthenticated={ setIsAuthenticated }/> *}
+    {/* <RefreshHandler class="refresh" setIsAuthenticated={ setIsAuthenticated }/> */}
       <Routes>
         <Route path="/Home" element={<Home />} />
         <Route path="/" element={<Home />} />
