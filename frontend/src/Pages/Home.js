@@ -83,7 +83,7 @@ const Home = () => {
 
       {/* Header */}
       <header className="main-header">
-        <div className="logo">MyApp</div>
+        <a href="/home" className="logo">MyApp</a>
         <nav className="main-nav">
           <a href="/home">Home</a>
           <a href="/products">Products</a>
@@ -109,7 +109,7 @@ const Home = () => {
           <p>Discover amazing features and possibilities!</p>
           
           {isLoggedInUser ? (
-            <a href="/home" className="logged-in-section">
+            <div className="logged-in-section">
               <h2>Welcome Back!</h2>
               <div className="dashboard-preview">
                 <div className="preview-card">
@@ -121,7 +121,7 @@ const Home = () => {
                   <p>Check your latest updates</p>
                 </div>
               </div>
-              <a>
+            </div>
             {
                 products && products.map((item, index) => (
                     <ul key= {index}>
