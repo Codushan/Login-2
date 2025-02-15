@@ -121,7 +121,7 @@ const Home = () => {
                   <p>Check your latest updates</p>
                 </div>
               </div>
-            </div>
+            <div>
             {
                 products && products.map((item, index) => (
                     <ul key= {index}>
