@@ -16,16 +16,16 @@ function RefreshHandler({ setIsAuthenticated }) {
             setIsAuthenticated(true);
             
             // Prevent logged-in user from accessing login/signup pages
-            if (location.pathname === '/' || location.pathname === '/login' || location.pathname === '/signup') {
+            if (location.pathname === '/' || location.pathname === '/Login' || location.pathname === '/Signup') {
                 console.log('Redirecting logged-in user to home');
-                navigate('/home', { replace: true });
+                navigate('/Home', { replace: true });
             }
         } else {
             console.log('User is NOT logged in');
             setIsAuthenticated(false);
             
             // Redirect to home page if not on login/signup/home pages
-            const publicPaths = ['/', '/login', '/signup', '/home'];
+            const publicPaths = ['/', '/Login', '/Signup', '/Home'];
             if (!publicPaths.includes(location.pathname)) {
                 console.log('Redirecting to home page');
                 navigate('/', { replace: true });
