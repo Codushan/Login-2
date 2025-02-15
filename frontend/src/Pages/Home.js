@@ -109,7 +109,7 @@ const Home = () => {
           <p>Discover amazing features and possibilities!</p>
           
           {isLoggedInUser ? (
-            <div className="logged-in-section">
+            <a href="/home" className="logged-in-section">
               <h2>Welcome Back!</h2>
               <div className="dashboard-preview">
                 <div className="preview-card">
@@ -121,7 +121,7 @@ const Home = () => {
                   <p>Check your latest updates</p>
                 </div>
               </div>
-              <div>
+              <a>
             {
                 products && products.map((item, index) => (
                     <ul key= {index}>
