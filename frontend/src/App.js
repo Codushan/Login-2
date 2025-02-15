@@ -9,9 +9,10 @@ import { useState } from 'react';
 import RefreshHandler from './RefreshHandler';
 
 function App() {
-useEffect(() => {
-    document.title = 'CB-login app';
-  }, []);
+    useEffect(() => {
+        document.title = 'CB-login app';
+      }, []);
+    
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const PrivateRoute = ({ element }) => {
