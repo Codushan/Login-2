@@ -10,31 +10,28 @@ function RefreshHandler({ setIsAuthenticated }) {
         console.log('Current Location:', location.pathname);
         console.log('JWT Token:', jwtToken);
 
-        setIsAuthenticated(false); // Set to false initially
-
         if (jwtToken) {
             console.log('User is logged in');
             setIsAuthenticated(true);
 
-            // Prevent logged-in user from accessing login/signup pages
-            const protectedPaths = ['/Home']; // Adjust based on your actual protected routes
+            // Redirect to home if trying to access login/signup pages
+            const protectedPaths = ['/Login', '/Signup'];
             if (protectedPaths.includes(location.pathname)) {
                 console.log('Redirecting logged-in user to home');
-                navigate('/', { replace: true });
-            } else if (location.pathname === '/Login' || location.pathname === '/Signup') {
-                console.log('Redirecting to home page');
-                navigate('/', { replace: true });
+                navigate('/Home', { replace: true });
             }
         } else {
             console.log('User is NOT logged in');
-            // Optionally redirect to login page if trying to access protected pages
-            const publicPaths = ['/', '/Login', '/Signup'];
+            setIsAuthenticated(false);
+
+            // Redirect to login if trying to access protected pages
+            const publicPaths = ['/', '/Login', '/Signup', '/Home'];
             if (!publicPaths.includes(location.pathname)) {
                 console.log('Redirecting to login page');
                 navigate('/Login', { replace: true });
             }
         }
-    }, [jwtToken, location.pathname, navigate, setIsAuthenticated]); // Dependency array includes jwtToken
+    }, [location.pathname, navigate, setIsAuthenticated]);
 
     return null;
 }
