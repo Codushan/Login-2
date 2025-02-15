@@ -32,7 +32,7 @@ const handleLogin = async (e) => {
         return handleError('email and password are required');
     }
     try {
-        const URL = 'https://test-backend-production-8542.up.railway.app/login';
+        const URL = 'https://login-2-api.vercel.app/login';
         const response = await fetch(URL, {
             method: 'POST',
             headers: {
