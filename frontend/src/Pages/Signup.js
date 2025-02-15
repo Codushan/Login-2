@@ -30,7 +30,7 @@ const Signup = () => {
             return handleError('All fields are required');
         }
         try {
-            const URL = 'https://login-2-api.vercel.app/Auth/signup';
+            const URL = 'https://login-2-api.vercel.app/auth/signup';
             const response = await fetch(URL, {
                 method: 'POST',
                 headers: {
