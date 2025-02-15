@@ -30,7 +30,7 @@ const Signup = () => {
             return handleError('All fields are required');
         }
         try {
-            const URL = 'https://test-backend-production-8542.up.railway.app/signup';
+            const URL = 'https://login-2-api.vercel.app/signup';
             const response = await fetch(URL, {
                 method: 'POST',
                 headers: {
